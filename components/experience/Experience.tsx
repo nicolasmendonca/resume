@@ -3,9 +3,9 @@ import {
   chakra,
   Image,
   Link,
-  ChakraProps,
   useColorModeValue,
 } from "@chakra-ui/react";
+import NextImage from 'next/image'
 
 const BaseCard = chakra('section', {
     baseStyle: {
@@ -21,16 +21,16 @@ const BaseCard = chakra('section', {
 
 const Experience = {
   Card: (props: any) => {
-    const bgColor = useColorModeValue('gray.200', 'gray.800')
+    const bgColor = useColorModeValue("gray.200", "gray.800");
     return <BaseCard bgColor={bgColor} {...props} />;
   },
-  Text: chakra('p', {
+  Text: chakra("p", {
     baseStyle: {
       pt: 6,
       _last: {
-        pb: 6
-      }
-    }
+        pb: 6,
+      },
+    },
   }),
   Heading: chakra(Flex, {
     baseStyle: {
@@ -47,46 +47,47 @@ const Experience = {
       },
     },
   }),
-  HeadingTitle: chakra('h3', {
+  HeadingTitle: chakra("h3", {
     baseStyle: {
-      fontSize: '24px',
-      fontWeight: 'bold'
-    }
+      fontSize: "24px",
+      fontWeight: "bold",
+    },
   }),
-  HeadingSubtitle: chakra('p', {
+  HeadingSubtitle: chakra("p", {
     baseStyle: {
-      fontSize: ['18px', '18px', '24px'],
-      fontWeight: 'thin'
-    }
+      fontSize: ["18px", "18px", "24px"],
+      fontWeight: "thin",
+    },
   }),
   HeadingImages: chakra(Flex, {
     baseStyle: {
       mt: [2, 2, 0],
-    }
+    },
   }),
-  HeadingImage: chakra(Image, {
+  HeadingImage: chakra(NextImage, {
+    shouldForwardProp: (prop) => ['src', 'width', 'height'].includes(prop),
     baseStyle: {
-      margin: '0 auto',
-      objectFit: 'contain',
+      margin: "0 auto",
+      objectFit: "contain",
       maxHeight: {
-        base: '24px',
-        md: '36px'
+        base: "24px",
+        md: "36px",
       },
       ml: 2,
       _first: {
-        ml: 0
-      }
-    }
+        ml: 0,
+      },
+    },
   }),
   Link: chakra(Link, {
     baseStyle: {
       color: "purple.400",
       fontWeight: "bold",
       _hover: {
-        textDecoration: 'underline'
-      }
-    }
-  })
+        textDecoration: "underline",
+      },
+    },
+  }),
 };
 
 

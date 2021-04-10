@@ -3,7 +3,6 @@ import {
   Text,
   useColorModeValue,
   Circle,
-  Image,
   Flex,
   Container,
   Box,
@@ -11,9 +10,15 @@ import {
   Link,
   Button,
   Tooltip,
+  chakra,
 } from "@chakra-ui/react";
 import React from "react";
+import Image from 'next/image'
 import { SiLinkedin, SiGmail, SiGithub } from 'react-icons/si'
+
+const NextImage = chakra(Image, {
+  shouldForwardProp: (prop) => !['borderRadius'].includes(prop)
+});
 
 const PageHeading: React.FC = () => {
   const headingBg = useColorModeValue("gray.200", "gray.800");
@@ -41,12 +46,12 @@ const PageHeading: React.FC = () => {
           width="124px"
           boxShadow="md"
         >
-          <Image
+          <NextImage
             borderRadius="50%"
             src="/profile.jpeg"
             alt="Profile picture"
-            width="120px"
-            height="120px"
+            width={120}
+            height={120}
           />
         </Circle>
         <Flex

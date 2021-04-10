@@ -18,10 +18,14 @@ const SparkDigitalExperience: React.FC<SparkDigitalExperienceProps> = () => {
         </Box>
         <Experience.HeadingImages>
           <Experience.HeadingImage
+            width={118}
+            height={36}
             src="/logos/macmillan.png"
             alt="Macmillan Learning logo"
           />
           <Experience.HeadingImage
+            width={92}
+            height={36}
             src="/logos/spark.png"
             alt="Spark Digital logo"
           />

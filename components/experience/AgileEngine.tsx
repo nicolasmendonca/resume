@@ -25,10 +25,14 @@ const AgileEngineExperience: React.FC<IAgileEngineExperienceProps> = () => {
         </Box>
         <Experience.HeadingImages>
           <Experience.HeadingImage
+            width={140}
+            height={36}
             src="/logos/indeed.png"
             alt="Indeed logo"
           />
           <Experience.HeadingImage
+            width={36}
+            height={36}
             src="/logos/agile-engine.png"
             alt="Agile Engine logo"
           />

@@ -1,23 +1,19 @@
-import React from "react";
+import React, { Suspense } from "react";
 import {
   Box,
-  Flex,
   Heading,
   Container,
   useColorMode,
   Button,
   useColorModeValue,
 } from "@chakra-ui/react";
-import Particles from "react-particles-js";
+import dynamic from 'next/dynamic';
 import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 import AgileEngineExperience from "../components/experience/AgileEngine";
-import IntiveFDVExperience from "../components/experience/IntiveFDV";
 import SparkDigitalExperience from "../components/experience/SparkDigital";
 import PageHeading from '../components/PageHeading';
 
-const CONFIG = {
-  particlesHeight: "350px",
-};
+const Particles = dynamic(() => import("../components/Particles"));
 
 interface IIndexPageProps {}
 
@@ -39,33 +35,7 @@ const IndexPage: React.FC<IIndexPageProps> = () => {
         {colorMode === "light" ? <SunIcon /> : <MoonIcon />}
       </Button>
       <Box>
-        <Box
-          width="full"
-          top="-1px"
-          alignItems="flex-end"
-          justifyContent="center"
-          height={CONFIG.particlesHeight}
-          background="linear-gradient(45deg, rgba(104,9,121,1) 15%, rgba(233,0,255,1) 100%)"
-          position="relative"
-          boxShadow="md"
-        >
-          <Flex alignItems="center" justifyContent="center">
-            <Particles
-              width="100vw"
-              height={CONFIG.particlesHeight}
-              params={{
-                interactivity: {
-                  events: {
-                    onhover: {
-                      enable: true,
-                      mode: "grab",
-                    },
-                  },
-                },
-              }}
-            />
-          </Flex>
-        </Box>
+        <Particles />
       </Box>
       <PageHeading />
       <Box my="0" py="12">
@@ -73,7 +43,6 @@ const IndexPage: React.FC<IIndexPageProps> = () => {
           <Heading as="h2">Experience</Heading>
           <AgileEngineExperience />
           <SparkDigitalExperience />
-          <IntiveFDVExperience />
         </Container>
       </Box>
     </Box>
