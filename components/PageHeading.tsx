@@ -13,11 +13,11 @@ import {
   chakra,
 } from "@chakra-ui/react";
 import React from "react";
-import Image from 'next/image'
-import { SiLinkedin, SiGmail, SiGithub } from 'react-icons/si'
+import Image from "next/image";
+import { SiLinkedin, SiGmail, SiGithub } from "react-icons/si";
 
 const NextImage = chakra(Image, {
-  shouldForwardProp: (prop) => !['borderRadius'].includes(prop)
+  shouldForwardProp: (prop) => ["src", "alt", "width", "height"].includes(prop),
 });
 
 const PageHeading: React.FC = () => {
@@ -67,6 +67,7 @@ const PageHeading: React.FC = () => {
             <Tooltip label="Github">
               <Button
                 as={Link}
+                title="Github"
                 isExternal
                 variant="ghost"
                 href="https://github.com/nicolasmendonca"
@@ -77,6 +78,7 @@ const PageHeading: React.FC = () => {
             <Tooltip label="Linkedin">
               <Button
                 as={Link}
+                title="Linkedin"
                 isExternal
                 variant="ghost"
                 href="https://www.linkedin.com/in/nicolas-mendonca-2705ba67/"
@@ -87,6 +89,7 @@ const PageHeading: React.FC = () => {
             <Tooltip label="Email">
               <Button
                 as={Link}
+                title="Email"
                 isExternal
                 variant="ghost"
                 href="mailto:nicolasmendonca@gmail.com"

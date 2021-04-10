@@ -1,23 +1,16 @@
-import {
-  Flex,
-  chakra,
-  Image,
-  Link,
-  useColorModeValue,
-} from "@chakra-ui/react";
-import NextImage from 'next/image'
+import { Flex, chakra, Image, Link, useColorModeValue } from "@chakra-ui/react";
+import NextImage from "next/image";
 
-const BaseCard = chakra('section', {
-    baseStyle: {
-      p: 6,
-      mt: 6,
-      borderRadius: 5,
-      bg: 'gray.800',
-      _first: { mt: 8 },
-      _last: { pb: 6 },
-
-    }
-  })
+const BaseCard = chakra("section", {
+  baseStyle: {
+    p: 6,
+    mt: 6,
+    borderRadius: 5,
+    bg: "gray.800",
+    _first: { mt: 8 },
+    _last: { pb: 6 },
+  },
+});
 
 const Experience = {
   Card: (props: any) => {
@@ -65,7 +58,8 @@ const Experience = {
     },
   }),
   HeadingImage: chakra(NextImage, {
-    shouldForwardProp: (prop) => ['src', 'width', 'height'].includes(prop),
+    shouldForwardProp: (prop) =>
+      ["alt", "src", "width", "height"].includes(prop),
     baseStyle: {
       margin: "0 auto",
       objectFit: "contain",
@@ -89,6 +83,5 @@ const Experience = {
     },
   }),
 };
-
 
 export default Experience;
