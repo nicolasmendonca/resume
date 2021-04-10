@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Image, Link, ListItem, UnorderedList } from "@chakra-ui/react";
+import { Box, ListItem, UnorderedList } from "@chakra-ui/react";
 import Experience from "./Experience";
 
 interface SparkDigitalExperienceProps {}

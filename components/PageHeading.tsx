@@ -12,8 +12,8 @@ import {
   Button,
   Tooltip,
 } from "@chakra-ui/react";
-import { AddIcon } from '@chakra-ui/icons'
 import React from "react";
+import { SiLinkedin, SiGmail, SiGithub } from 'react-icons/si'
 
 const PageHeading: React.FC = () => {
   const headingBg = useColorModeValue("gray.100", "gray.800");
@@ -60,18 +60,33 @@ const PageHeading: React.FC = () => {
           </Text>
           <Grid gridTemplateColumns="repeat(3, 1fr)" gridGap="2">
             <Tooltip label="Github">
-              <Button as={Link} isExternal variant="ghost">
-                <AddIcon />
+              <Button
+                as={Link}
+                isExternal
+                variant="ghost"
+                href="https://github.com/nicolasmendonca"
+              >
+                <SiGithub />
               </Button>
             </Tooltip>
             <Tooltip label="Linkedin">
-              <Button as={Link} isExternal variant="ghost">
-                <AddIcon />
+              <Button
+                as={Link}
+                isExternal
+                variant="ghost"
+                href="https://www.linkedin.com/in/nicolas-mendonca-2705ba67/"
+              >
+                <SiLinkedin />
               </Button>
             </Tooltip>
             <Tooltip label="Email">
-              <Button as={Link} isExternal variant="ghost">
-                <AddIcon />
+              <Button
+                as={Link}
+                isExternal
+                variant="ghost"
+                href="mailto:nicolasmendonca@gmail.com"
+              >
+                <SiGmail />
               </Button>
             </Tooltip>
           </Grid>
