@@ -16,7 +16,7 @@ import React from "react";
 import { SiLinkedin, SiGmail, SiGithub } from 'react-icons/si'
 
 const PageHeading: React.FC = () => {
-  const headingBg = useColorModeValue("gray.100", "gray.800");
+  const headingBg = useColorModeValue("gray.200", "gray.800");
 
   return (
     <Box

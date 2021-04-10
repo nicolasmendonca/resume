@@ -23,7 +23,7 @@ interface IIndexPageProps {}
 
 const IndexPage: React.FC<IIndexPageProps> = () => {
   const { colorMode, toggleColorMode } = useColorMode();
-  const bodyBg = useColorModeValue("gray.300", "gray.700");
+  const bodyBg = useColorModeValue("gray.100", "gray.700");
 
   return (
     <Box minHeight="100vh" backgroundColor={bodyBg}>
