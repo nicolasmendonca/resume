@@ -1,17 +1,11 @@
 import React from "react";
 import {
   Box,
-  Image,
   Flex,
-  Text,
   Heading,
-  Center,
-  Divider,
-  Stack,
   Container,
   useColorMode,
   Button,
-  Circle,
   useColorModeValue,
 } from "@chakra-ui/react";
 import Particles from "react-particles-js";
@@ -20,7 +14,6 @@ import AgileEngineExperience from "../components/experience/AgileEngine";
 import IntiveFDVExperience from "../components/experience/IntiveFDV";
 import SparkDigitalExperience from "../components/experience/SparkDigital";
 import PageHeading from '../components/PageHeading';
-import { useIntersectionObserver } from '@asyarb/use-intersection-observer';
 
 const CONFIG = {
   particlesHeight: "350px",
@@ -31,17 +24,6 @@ interface IIndexPageProps {}
 const IndexPage: React.FC<IIndexPageProps> = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const bodyBg = useColorModeValue("gray.300", "gray.700");
-
-  const topSectionRef = React.useRef<HTMLDivElement>()
-  const isTopSectionVisible = useIntersectionObserver({
-    ref: topSectionRef,
-    options: {
-      threshold: [0.01],
-      triggerOnce: false
-    }
-  });
-
-  console.warn({isTopSectionVisible});
 
   return (
     <Box minHeight="100vh" backgroundColor={bodyBg}>
@@ -58,7 +40,6 @@ const IndexPage: React.FC<IIndexPageProps> = () => {
       </Button>
       <Box>
         <Box
-          ref={topSectionRef}
           width="full"
           top="-1px"
           alignItems="flex-end"
