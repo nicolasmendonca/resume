@@ -15,7 +15,7 @@ import SparkDigitalExperience from "../components/experience/SparkDigital";
 import PageHeading from '../components/PageHeading';
 
 const Particles = dynamic(
-  () => import(/* webpackMode: lazy */ "../components/Particles")
+  () => import(/* webpackMode: "lazy" */ "../components/Particles")
 );
 
 interface IIndexPageProps {}
@@ -28,6 +28,7 @@ const IndexPage: React.FC<IIndexPageProps> = () => {
     <Box minHeight="100vh" backgroundColor={bodyBg}>
       <Head>
         <title>Nicolas Mendonca</title>
+        <meta name="description" content="My personal resume. Learn about my career and what I do." />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Button
