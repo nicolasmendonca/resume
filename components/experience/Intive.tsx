@@ -32,10 +32,11 @@ const Intive: React.FC<IntiveProps> = () => {
 				stay compliant with government regulations. It required a lot of work with charts with D3, a custom filtering
 				system and PDF annotations.
 			</Experience.Text>
-			<Experience.Text></Experience.Text>
 			The tech stack I used during this job included the following:
 			<UnorderedList>
 				<ListItem>React.js</ListItem>
+				<ListItem>Redux</ListItem>
+				<ListItem>Immutable.js</ListItem>
 				<ListItem>Typescript</ListItem>
 				<ListItem>Lerna</ListItem>
 				<ListItem>Storybook</ListItem>
