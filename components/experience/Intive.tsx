@@ -13,9 +13,9 @@ const Intive: React.FC<IntiveProps> = () => {
 					<Experience.HeadingSubtitle>Intive / Intelligize</Experience.HeadingSubtitle>
 				</Box>
 				<Experience.HeadingImages>
-					<Experience.HeadingImage width={140} height={36} src="/logos/intive.png" alt="Intive logo" />
+					<Experience.HeadingImage width={140} height={36} src="/logos/intelligize.png" alt="Intelligize logo" />
 					<Box>
-						<Experience.HeadingImage width={140} height={36} src="/logos/intelligize.png" alt="Intelligize logo" />
+						<Experience.HeadingImage width={140} height={36} src="/logos/intive.png" alt="Intive logo" />
 					</Box>
 				</Experience.HeadingImages>
 			</Experience.Heading>
