@@ -5,6 +5,7 @@ import Head from 'next/head';
 import AgileEngineExperience from '../components/experience/AgileEngine';
 import SparkDigitalExperience from '../components/experience/SparkDigital';
 import PageHeading from '../components/PageHeading';
+import Intive from '../components/experience/Intive';
 
 const ThemeSwitcher = dynamic(() => import(/* webpackMode: "lazy" */ '../components/ThemeSwitcher'));
 const Particles = dynamic(() => import(/* webpackMode: "lazy",  */ '../components/Particles'));
@@ -31,6 +32,7 @@ const IndexPage: React.FC<IIndexPageProps> = () => {
 					<Heading as="h2">Experience</Heading>
 					<AgileEngineExperience />
 					<SparkDigitalExperience />
+					<Intive />
 				</Container>
 			</Box>
 		</Box>
