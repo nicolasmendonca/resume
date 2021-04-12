@@ -2,13 +2,14 @@ import React from 'react';
 import { Box, Heading, Container, useColorModeValue } from '@chakra-ui/react';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
-import AgileEngineExperience from '../components/experience/AgileEngine';
-import SparkDigitalExperience from '../components/experience/SparkDigital';
-import PageHeading from '../components/PageHeading';
-import Intive from '../components/experience/Intive';
+import PageHeading from 'components/PageHeading';
+import AgileEngineExperience from 'experience/AgileEngine';
+import SparkDigitalExperience from 'experience/SparkDigitalExperience';
+import IntiveExperience from 'experience/IntiveExperience';
+import WhiteCanvasExperience from 'experience/WhiteCanvasExperience';
 
-const ThemeSwitcher = dynamic(() => import(/* webpackMode: "lazy" */ '../components/ThemeSwitcher'));
-const Particles = dynamic(() => import(/* webpackMode: "lazy",  */ '../components/Particles'));
+const ThemeSwitcher = dynamic(() => import(/* webpackMode: "lazy" */ 'components/ThemeSwitcher'));
+const Particles = dynamic(() => import(/* webpackMode: "lazy",  */ 'components/Particles'));
 
 interface IIndexPageProps {}
 
@@ -32,7 +33,8 @@ const IndexPage: React.FC<IIndexPageProps> = () => {
 					<Heading as="h2">Experience</Heading>
 					<AgileEngineExperience />
 					<SparkDigitalExperience />
-					<Intive />
+					<IntiveExperience />
+					<WhiteCanvasExperience />
 				</Container>
 			</Box>
 		</Box>

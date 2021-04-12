@@ -1,10 +1,10 @@
 import React from 'react';
-import { Box, Text, Link, ListItem, UnorderedList } from '@chakra-ui/react';
+import { Box, Link, ListItem, UnorderedList } from '@chakra-ui/react';
 import Experience from './Experience';
 
-interface IntiveProps {}
+interface IntiveExperienceProps {}
 
-const Intive: React.FC<IntiveProps> = () => {
+const IntiveExperience: React.FC<IntiveExperienceProps> = () => {
 	return (
 		<Experience.Card>
 			<Experience.Heading>
@@ -13,9 +13,9 @@ const Intive: React.FC<IntiveProps> = () => {
 					<Experience.HeadingSubtitle>Intive / Intelligize</Experience.HeadingSubtitle>
 				</Box>
 				<Experience.HeadingImages>
-					<Experience.HeadingImage width={140} height={36} src="/logos/intelligize.png" alt="Intelligize logo" />
+					<Experience.HeadingImage width={140} height={36} src="/logos/intive.png" alt="Intive logo" />
 					<Box>
-						<Experience.HeadingImage width={140} height={36} src="/logos/intive.png" alt="Intive logo" />
+						<Experience.HeadingImage width={140} height={36} src="/logos/intelligize.png" alt="Intelligize logo" />
 					</Box>
 				</Experience.HeadingImages>
 			</Experience.Heading>
@@ -47,4 +47,4 @@ const Intive: React.FC<IntiveProps> = () => {
 	);
 };
 
-export default Intive;
+export default IntiveExperience;
