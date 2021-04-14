@@ -23,9 +23,9 @@ const AgileEngineExperience: React.FC<IAgileEngineExperienceProps> = () => {
 					Indeed.com
 				</Link>{' '}
 				for a year, which is the #1 job search platform in the world. I started out as a senior frontend developer, and
-				I started to take ownership of the project and guide other devs, I've been promoted to a{' '}
-				<Text as="b">Team Lead</Text> role. After a year of hard work,{' '}
-				<Text as="b">I ended up leading 4 development teams, composed by 16 developers.</Text>
+				I started to take ownership of the project and guide other devs. <br />
+				After a year of hard work, I've been promoted to a <Text as="b">Tech Lead</Text> role and{' '}
+				<Text as="b">ended up leading 4 development teams, composed by 16 developers.</Text>
 			</Experience.Text>
 			<Experience.Text>
 				My work consisted in helping{' '}
