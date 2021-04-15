@@ -1,7 +1,7 @@
-import { Flex, chakra, Image, Link, useColorModeValue, Box, ChakraProps } from '@chakra-ui/react';
-import NextImage, { ImageProps } from 'next/image';
+import * as Chakra from '@chakra-ui/react';
+import NextImage from 'next/image';
 
-const BaseCard = chakra('section', {
+const BaseCard = Chakra.chakra('section', {
 	baseStyle: {
 		p: 6,
 		mt: 6,
@@ -12,7 +12,7 @@ const BaseCard = chakra('section', {
 	},
 });
 
-const ChakraNextImage = chakra(NextImage, {
+const ChakraNextImage = Chakra.chakra(NextImage, {
 	shouldForwardProp: (prop) => ['alt', 'src', 'width', 'height'].includes(prop),
 	baseStyle: {
 		margin: '0 auto',
@@ -35,18 +35,18 @@ const HeadingImage: React.FC<{
 	alt: string;
 }> = (props) => {
 	return (
-		<Box ml={4} _first={{ ml: 0 }}>
+		<Chakra.Box ml={4} _first={{ ml: 0 }}>
 			<ChakraNextImage {...props} />
-		</Box>
+		</Chakra.Box>
 	);
 };
 
 const Experience = {
 	Card: (props: any) => {
-		const bgColor = useColorModeValue('gray.200', 'gray.800');
+		const bgColor = Chakra.useColorModeValue('gray.200', 'gray.800');
 		return <BaseCard bgColor={bgColor} {...props} />;
 	},
-	Text: chakra('p', {
+	Text: Chakra.chakra('p', {
 		baseStyle: {
 			pt: 6,
 			_last: {
@@ -54,7 +54,7 @@ const Experience = {
 			},
 		},
 	}),
-	Heading: chakra(Flex, {
+	Heading: Chakra.chakra(Chakra.Flex, {
 		baseStyle: {
 			mt: 0,
 			position: 'relative',
@@ -69,26 +69,26 @@ const Experience = {
 			},
 		},
 	}),
-	HeadingTitle: chakra('h3', {
+	HeadingTitle: Chakra.chakra('h3', {
 		baseStyle: {
 			fontSize: '24px',
 			fontWeight: 'bold',
 		},
 	}),
-	HeadingSubtitle: chakra('p', {
+	HeadingSubtitle: Chakra.chakra('p', {
 		baseStyle: {
 			fontSize: ['18px', '18px', '24px'],
 			fontWeight: 'thin',
 		},
 	}),
-	HeadingImages: chakra(Flex, {
+	HeadingImages: Chakra.chakra(Chakra.Flex, {
 		baseStyle: {
 			mt: [2, 2, 0],
 			alignItems: 'center',
 		},
 	}),
 	HeadingImage,
-	Link: chakra(Link, {
+	Link: Chakra.chakra(Chakra.Link, {
 		baseStyle: {
 			color: 'purple.400',
 			fontWeight: 'bold',

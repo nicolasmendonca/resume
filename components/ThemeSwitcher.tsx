@@ -1,14 +1,14 @@
 import React from 'react';
-import { Button, useColorMode, useColorModeValue } from '@chakra-ui/react';
+import * as Chakra from '@chakra-ui/react';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 
 interface ThemeSwitcherProps {}
 
 const ThemeSwitcher: React.FC<ThemeSwitcherProps> = () => {
-	const { colorMode, toggleColorMode } = useColorMode();
-	const bgColor = useColorModeValue('gray.100', 'gray.900');
+	const { colorMode, toggleColorMode } = Chakra.useColorMode();
+	const bgColor = Chakra.useColorModeValue('gray.100', 'gray.900');
 	return (
-		<Button
+		<Chakra.Button
 			aria-label="Toggle theme"
 			position="fixed"
 			bottom={[0, 0, 'initial']}
@@ -21,7 +21,7 @@ const ThemeSwitcher: React.FC<ThemeSwitcherProps> = () => {
 			zIndex={2}
 		>
 			{colorMode === 'light' ? <SunIcon /> : <MoonIcon />}
-		</Button>
+		</Chakra.Button>
 	);
 };
 

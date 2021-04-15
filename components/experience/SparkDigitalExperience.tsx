@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, ListItem, UnorderedList } from '@chakra-ui/react';
+import * as Chakra from '@chakra-ui/react';
 import Experience from './Experience';
 
 interface SparkDigitalExperienceProps {}
@@ -8,10 +8,10 @@ const SparkDigitalExperience: React.FC<SparkDigitalExperienceProps> = () => {
 	return (
 		<Experience.Card>
 			<Experience.Heading>
-				<Box>
+				<Chakra.Box>
 					<Experience.HeadingTitle>Senior Software Engineer</Experience.HeadingTitle>
 					<Experience.HeadingSubtitle>Spark Digital / Macmillan</Experience.HeadingSubtitle>
-				</Box>
+				</Chakra.Box>
 				<Experience.HeadingImages>
 					<Experience.HeadingImage width={92} height={36} src="/logos/spark.png" alt="Spark Digital logo" />
 					<Experience.HeadingImage width={118} height={36} src="/logos/macmillan.png" alt="Macmillan Learning logo" />
@@ -32,15 +32,15 @@ const SparkDigitalExperience: React.FC<SparkDigitalExperienceProps> = () => {
 				that codebase to redux.
 			</Experience.Text>
 			The tech stack I used during this job included the following:
-			<UnorderedList>
-				<ListItem>React.js</ListItem>
-				<ListItem>Typescript</ListItem>
-				<ListItem>Jest</ListItem>
-				<ListItem>Enzyme</ListItem>
-				<ListItem>Docker</ListItem>
-				<ListItem>Python for build scripts</ListItem>
-				<ListItem>SQL for stored procedures and migrations</ListItem>
-			</UnorderedList>
+			<Chakra.UnorderedList>
+				<Chakra.ListItem>React.js</Chakra.ListItem>
+				<Chakra.ListItem>Typescript</Chakra.ListItem>
+				<Chakra.ListItem>Jest</Chakra.ListItem>
+				<Chakra.ListItem>Enzyme</Chakra.ListItem>
+				<Chakra.ListItem>Docker</Chakra.ListItem>
+				<Chakra.ListItem>Python for build scripts</Chakra.ListItem>
+				<Chakra.ListItem>SQL for stored procedures and migrations</Chakra.ListItem>
+			</Chakra.UnorderedList>
 		</Experience.Card>
 	);
 };

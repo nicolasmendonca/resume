@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Text, Link, ListItem, UnorderedList } from '@chakra-ui/react';
+import * as Chakra from '@chakra-ui/react';
 import Experience from './Experience';
 
 interface IAgileEngineExperienceProps {}
@@ -8,10 +8,10 @@ const AgileEngineExperience: React.FC<IAgileEngineExperienceProps> = () => {
 	return (
 		<Experience.Card>
 			<Experience.Heading>
-				<Box flexGrow={1}>
+				<Chakra.Box flexGrow={1}>
 					<Experience.HeadingTitle>Lead Software Engineer</Experience.HeadingTitle>
 					<Experience.HeadingSubtitle>Agile Engine / Indeed</Experience.HeadingSubtitle>
-				</Box>
+				</Chakra.Box>
 				<Experience.HeadingImages>
 					<Experience.HeadingImage width={36} height={36} src="/logos/agile-engine.png" alt="Agile Engine logo" />
 					<Experience.HeadingImage width={140} height={36} src="/logos/indeed.png" alt="Indeed logo" />
@@ -19,13 +19,13 @@ const AgileEngineExperience: React.FC<IAgileEngineExperienceProps> = () => {
 			</Experience.Heading>
 			<Experience.Text>
 				I've been working as a contractor full time dedicated to{' '}
-				<Link href="https://www.indeed.com" color="purple.400" fontWeight="bold" isExternal>
+				<Chakra.Link href="https://www.indeed.com" color="purple.400" fontWeight="bold" isExternal>
 					Indeed.com
-				</Link>{' '}
+				</Chakra.Link>{' '}
 				for a year, which is the #1 job search platform in the world. I started out as a senior frontend developer, and
 				I started to take ownership of the project and guide other devs. <br />
-				After a year of hard work, I've been promoted to a <Text as="b">Tech Lead</Text> role and{' '}
-				<Text as="b">ended up leading 4 development teams, composed by 16 developers.</Text>
+				After a year of hard work, I've been promoted to a <Chakra.Text as="b">Tech Lead</Chakra.Text> role and{' '}
+				<Chakra.Text as="b">ended up leading 4 development teams, composed by 16 developers.</Chakra.Text>
 			</Experience.Text>
 			<Experience.Text>
 				My work consisted in helping{' '}
@@ -41,20 +41,20 @@ const AgileEngineExperience: React.FC<IAgileEngineExperienceProps> = () => {
 				and I contributed to different teams following their respective workflows and guidelines.
 			</Experience.Text>
 			The tech stack I used during this job included the following:
-			<UnorderedList>
-				<ListItem>React.js</ListItem>
-				<ListItem>Typescript</ListItem>
-				<ListItem>Lerna</ListItem>
-				<ListItem>Storybook</ListItem>
-				<ListItem>Accessibility</ListItem>
-				<ListItem>Jest</ListItem>
-				<ListItem>Enzyme</ListItem>
-				<ListItem>@testing-lib/react</ListItem>
-				<ListItem>Cypress</ListItem>
-				<ListItem>Docker</ListItem>
-				<ListItem>Python</ListItem>
-				<ListItem>Django + djangorestframework</ListItem>
-			</UnorderedList>
+			<Chakra.UnorderedList>
+				<Chakra.ListItem>React.js</Chakra.ListItem>
+				<Chakra.ListItem>Typescript</Chakra.ListItem>
+				<Chakra.ListItem>Lerna</Chakra.ListItem>
+				<Chakra.ListItem>Storybook</Chakra.ListItem>
+				<Chakra.ListItem>Accessibility</Chakra.ListItem>
+				<Chakra.ListItem>Jest</Chakra.ListItem>
+				<Chakra.ListItem>Enzyme</Chakra.ListItem>
+				<Chakra.ListItem>@testing-lib/react</Chakra.ListItem>
+				<Chakra.ListItem>Cypress</Chakra.ListItem>
+				<Chakra.ListItem>Docker</Chakra.ListItem>
+				<Chakra.ListItem>Python</Chakra.ListItem>
+				<Chakra.ListItem>Django + djangorestframework</Chakra.ListItem>
+			</Chakra.UnorderedList>
 		</Experience.Card>
 	);
 };

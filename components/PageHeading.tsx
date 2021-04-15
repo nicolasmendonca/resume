@@ -1,71 +1,70 @@
-import {
-	Heading,
-	Text,
-	useColorModeValue,
-	Circle,
-	Flex,
-	Container,
-	Box,
-	Grid,
-	Link,
-	Button,
-	Tooltip,
-	chakra,
-} from '@chakra-ui/react';
+import * as Chakra from '@chakra-ui/react';
 import React from 'react';
 import Image from 'next/image';
 import { SiLinkedin, SiGmail, SiGithub } from 'react-icons/si';
 
-const NextImage = chakra(Image, {
+const NextImage = Chakra.chakra(Image, {
 	shouldForwardProp: (prop) => ['src', 'alt', 'width', 'height'].includes(prop),
 });
 
 const PageHeading: React.FC = () => {
-	const headingBg = useColorModeValue('gray.200', 'gray.800');
+	const headingBg = Chakra.useColorModeValue('gray.200', 'gray.800');
 
 	return (
-		<Box boxShadow="xl" backgroundColor={headingBg} py="6" borderRadius="md">
-			<Container
+		<Chakra.Box boxShadow="xl" backgroundColor={headingBg} py="6" borderRadius="md">
+			<Chakra.Container
 				display="flex"
 				flexDirection={['column', 'column', 'row']}
 				alignItems="center"
 				justifyContent="space-between"
 				maxW="container.md"
 			>
-				<Circle mx="6" borderRadius="50%" backgroundColor="white" height="124px" width="124px" boxShadow="md">
+				<Chakra.Circle mx="6" borderRadius="50%" backgroundColor="white" height="124px" width="124px" boxShadow="md">
 					<NextImage borderRadius="50%" src="/profile.jpeg" alt="Profile picture" width={120} height={120} />
-				</Circle>
-				<Flex mr={[0, 0, 6]} alignItems={['center', 'center', 'flex-end']} flexDirection="column">
-					<Heading>Nicolás Mendonca</Heading>
-					<Text as="h2" fontSize="xl" letterSpacing="tight" py="2">
+				</Chakra.Circle>
+				<Chakra.Flex mr={[0, 0, 6]} alignItems={['center', 'center', 'flex-end']} flexDirection="column">
+					<Chakra.Heading>Nicolás Mendonca</Chakra.Heading>
+					<Chakra.Text as="h2" fontSize="xl" letterSpacing="tight" py="2">
 						Full Stack Dev
-					</Text>
-					<Grid gridTemplateColumns="repeat(3, 1fr)" gridGap="2">
-						<Tooltip label="Github">
-							<Button as={Link} title="Github" isExternal variant="ghost" href="https://github.com/nicolasmendonca">
+					</Chakra.Text>
+					<Chakra.Grid gridTemplateColumns="repeat(3, 1fr)" gridGap="2">
+						<Chakra.Tooltip label="Github">
+							<Chakra.Button
+								as={Chakra.Link}
+								title="Github"
+								isExternal
+								variant="ghost"
+								href="https://github.com/nicolasmendonca"
+							>
 								<SiGithub />
-							</Button>
-						</Tooltip>
-						<Tooltip label="Linkedin">
-							<Button
-								as={Link}
+							</Chakra.Button>
+						</Chakra.Tooltip>
+						<Chakra.Tooltip label="Linkedin">
+							<Chakra.Button
+								as={Chakra.Link}
 								title="Linkedin"
 								isExternal
 								variant="ghost"
 								href="https://www.linkedin.com/in/nicolas-mendonca-2705ba67/"
 							>
 								<SiLinkedin />
-							</Button>
-						</Tooltip>
-						<Tooltip label="Email">
-							<Button as={Link} title="Email" isExternal variant="ghost" href="mailto:nicolasmendonca@gmail.com">
+							</Chakra.Button>
+						</Chakra.Tooltip>
+						<Chakra.Tooltip label="Email">
+							<Chakra.Button
+								as={Chakra.Link}
+								title="Email"
+								isExternal
+								variant="ghost"
+								href="mailto:nicolasmendonca@gmail.com"
+							>
 								<SiGmail />
-							</Button>
-						</Tooltip>
-					</Grid>
-				</Flex>
-			</Container>
-		</Box>
+							</Chakra.Button>
+						</Chakra.Tooltip>
+					</Chakra.Grid>
+				</Chakra.Flex>
+			</Chakra.Container>
+		</Chakra.Box>
 	);
 };
 
