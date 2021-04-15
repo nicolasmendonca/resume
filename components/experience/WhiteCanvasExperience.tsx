@@ -1,10 +1,11 @@
 import React from 'react';
-import { Box, ListItem, UnorderedList } from '@chakra-ui/react';
+import { Box, ListItem, UnorderedList, useColorModeValue } from '@chakra-ui/react';
 import Experience from './Experience';
 
 interface IWhiteCanvasExperienceProps {}
 
 const WhiteCanvasExperience: React.FC<IWhiteCanvasExperienceProps> = () => {
+	const whiteCanvasLogo = useColorModeValue('/logos/white-canvas-light.png', '/logos/white-canvas-dark.png');
 	return (
 		<Experience.Card>
 			<Experience.Heading>
@@ -13,7 +14,7 @@ const WhiteCanvasExperience: React.FC<IWhiteCanvasExperienceProps> = () => {
 					<Experience.HeadingSubtitle>White Canvas</Experience.HeadingSubtitle>
 				</Box>
 				<Experience.HeadingImages>
-					<Experience.HeadingImage width={140} height={50} src="/logos/white-canvas.png" alt="Agile Engine logo" />
+					<Experience.HeadingImage width={140} height={50} src={whiteCanvasLogo} alt="Agile Engine logo" />
 				</Experience.HeadingImages>
 			</Experience.Heading>
 			<Experience.Text>
