@@ -18,7 +18,7 @@ const ThemeSwitcher: React.FC<ThemeSwitcherProps> = () => {
 			onClick={toggleColorMode}
 			variant="ghost"
 			bg={[bgColor, bgColor, 'transparent']}
-			zIndex={2}
+			zIndex="banner"
 		>
 			{colorMode === 'light' ? <SunIcon /> : <MoonIcon />}
 		</Chakra.Button>

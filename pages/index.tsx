@@ -8,6 +8,7 @@ import SparkDigitalExperience from 'experience/SparkDigitalExperience';
 import IntiveExperience from 'experience/IntiveExperience';
 import WhiteCanvasExperience from 'experience/WhiteCanvasExperience';
 import Education from '../components/Education';
+import Courses from '../components/Courses';
 
 const ThemeSwitcher = dynamic(() => import(/* webpackMode: "lazy" */ 'components/ThemeSwitcher'));
 const Particles = dynamic(() => import(/* webpackMode: "lazy",  */ 'components/Particles'));
@@ -39,17 +40,41 @@ const IndexPage: React.FC<IIndexPageProps> = () => {
 					<PageHeading />
 				</Chakra.Box>
 			</Chakra.Box>
-			<Chakra.Box my="0" pt={[12, 12, 32]} pb={12}>
+			<Chakra.Box height={[8, 8, 20]} w={0} />
+			<Chakra.Box pb={12}>
+				<Chakra.Box py={6} w="full" bgColor={bodyBg} position="sticky" top={0} zIndex="sticky" boxShadow="md">
+					<Chakra.Container maxW="container.md">
+						<Chakra.Heading as="h2">Experience</Chakra.Heading>
+					</Chakra.Container>
+				</Chakra.Box>
 				<Chakra.Container maxW="container.md">
-					<Chakra.Heading as="h2">Experience</Chakra.Heading>
 					<AgileEngineExperience />
 					<SparkDigitalExperience />
 					<IntiveExperience />
 					<WhiteCanvasExperience />
 				</Chakra.Container>
 			</Chakra.Box>
-			<Chakra.Box my="0" pt={6} pb={12}>
-				<Education />
+
+			<Chakra.Box pb={12}>
+				<Chakra.Box py={6} w="full" bgColor={bodyBg} position="sticky" top={0} zIndex="sticky" boxShadow="md">
+					<Chakra.Container maxW="container.md">
+						<Chakra.Heading as="h2">Courses</Chakra.Heading>
+					</Chakra.Container>
+				</Chakra.Box>
+				<Chakra.Container maxW="container.2xl">
+					<Courses />
+				</Chakra.Container>
+			</Chakra.Box>
+
+			<Chakra.Box pb={12}>
+				<Chakra.Box py={6} w="full" bgColor={bodyBg} position="sticky" top={0} zIndex="sticky" boxShadow="md">
+					<Chakra.Container maxW="container.md">
+						<Chakra.Heading as="h2">Education</Chakra.Heading>
+					</Chakra.Container>
+				</Chakra.Box>
+				<Chakra.Container maxW="container.md">
+					<Education />
+				</Chakra.Container>
 			</Chakra.Box>
 		</Chakra.Box>
 	);

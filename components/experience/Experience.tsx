@@ -46,6 +46,7 @@ const Experience = {
 		const bgColor = Chakra.useColorModeValue('gray.200', 'gray.800');
 		return <BaseCard bgColor={bgColor} {...props} />;
 	},
+	ChakraNextImage,
 	Text: Chakra.chakra('p', {
 		baseStyle: {
 			pt: 6,
