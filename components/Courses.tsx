@@ -18,16 +18,16 @@ const Courses: React.FC<CoursesProps> = () => {
 				responsive={{
 					desktop: {
 						breakpoint: { max: 3000, min: 1024 },
-						items: 5,
+						items: 4,
 						slidesToSlide: 3, // optional, default to 1.
 					},
 					tablet: {
-						breakpoint: { max: 1024, min: 464 },
+						breakpoint: { max: 1024, min: 674 },
 						items: 2,
 						slidesToSlide: 2, // optional, default to 1.
 					},
 					mobile: {
-						breakpoint: { max: 464, min: 0 },
+						breakpoint: { max: 674, min: 0 },
 						items: 1,
 						slidesToSlide: 1, // optional, default to 1.
 					},

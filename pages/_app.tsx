@@ -1,22 +1,12 @@
-import { ChakraProvider, ColorModeProvider, useColorMode } from "@chakra-ui/react";
-
-const ColorContainerClassProvider: React.FC = ({children}) => {
-  const {colorMode} = useColorMode();
-  return <main className={colorMode}>{children}</main>
-}
+import { ChakraProvider } from '@chakra-ui/react';
+import '../styles/base.scss';
 
 function MyApp({ Component, pageProps }) {
-  return (
-    <ChakraProvider >
-      {/* <ColorModeProvider options={{
-        initialColorMode: 'dark',
-      }}> */}
-        {/* <ColorContainerClassProvider> */}
-          <Component {...pageProps} />
-        {/* </ColorContainerClassProvider> */}
-      {/* </ColorModeProvider> */}
-    </ChakraProvider>
-  );
+	return (
+		<ChakraProvider>
+			<Component {...pageProps} />
+		</ChakraProvider>
+	);
 }
 
 export default MyApp;
