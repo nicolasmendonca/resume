@@ -9,14 +9,35 @@ import IntiveExperience from 'experience/IntiveExperience';
 import WhiteCanvasExperience from 'experience/WhiteCanvasExperience';
 import Education from '../components/Education';
 import Courses from '../components/Courses';
+import { chakra } from '@chakra-ui/react';
 
 const ThemeSwitcher = dynamic(() => import(/* webpackMode: "lazy" */ 'components/ThemeSwitcher'));
 const Particles = dynamic(() => import(/* webpackMode: "lazy",  */ 'components/Particles'));
 
+function useBodyBg() {
+	return Chakra.useColorModeValue('gray.300', 'gray.600');
+}
+
+function useHeadingBg() {
+	return Chakra.useColorModeValue('gray.200', 'gray.700');
+}
+
+const BoxContainer = (props) => {
+	const bodyBg = useBodyBg();
+	return (
+		<Chakra.Box py={6} w="full" bgColor={bodyBg} position="sticky" top={0} zIndex="sticky" boxShadow="md" {...props} />
+	);
+};
+
+const BoxHeading = (props) => {
+	const headingBg = useHeadingBg();
+	return <Chakra.Box pb={12} bgColor={headingBg} {...props} />;
+};
+
 interface IIndexPageProps {}
 
 const IndexPage: React.FC<IIndexPageProps> = () => {
-	const bodyBg = Chakra.useColorModeValue('gray.100', 'gray.700');
+	const bodyBg = Chakra.useColorModeValue('gray.300', 'gray.600');
 
 	return (
 		<Chakra.Box minHeight="100vh" backgroundColor={bodyBg} position="relative">
@@ -40,42 +61,42 @@ const IndexPage: React.FC<IIndexPageProps> = () => {
 					<PageHeading />
 				</Chakra.Box>
 			</Chakra.Box>
-			<Chakra.Box height={[8, 8, 20]} w={0} />
-			<Chakra.Box pb={12}>
-				<Chakra.Box py={6} w="full" bgColor={bodyBg} position="sticky" top={0} zIndex="sticky" boxShadow="md">
+			<Chakra.Box height={[8, 8, 20]} bgColor={bodyBg} />
+			<BoxHeading>
+				<BoxContainer>
 					<Chakra.Container maxW="container.md">
 						<Chakra.Heading as="h2">Experience</Chakra.Heading>
 					</Chakra.Container>
-				</Chakra.Box>
+				</BoxContainer>
 				<Chakra.Container maxW="container.md">
 					<AgileEngineExperience />
 					<SparkDigitalExperience />
 					<IntiveExperience />
 					<WhiteCanvasExperience />
 				</Chakra.Container>
-			</Chakra.Box>
+			</BoxHeading>
 
-			<Chakra.Box pb={12}>
-				<Chakra.Box py={6} w="full" bgColor={bodyBg} position="sticky" top={0} zIndex="sticky" boxShadow="md">
+			<BoxHeading>
+				<BoxContainer>
 					<Chakra.Container maxW="container.md">
 						<Chakra.Heading as="h2">Courses</Chakra.Heading>
 					</Chakra.Container>
-				</Chakra.Box>
+				</BoxContainer>
 				<Chakra.Container maxW="container.2xl">
 					<Courses />
 				</Chakra.Container>
-			</Chakra.Box>
+			</BoxHeading>
 
-			<Chakra.Box pb={12}>
-				<Chakra.Box py={6} w="full" bgColor={bodyBg} position="sticky" top={0} zIndex="sticky" boxShadow="md">
+			<BoxHeading>
+				<BoxContainer>
 					<Chakra.Container maxW="container.md">
 						<Chakra.Heading as="h2">Education</Chakra.Heading>
 					</Chakra.Container>
-				</Chakra.Box>
+				</BoxContainer>
 				<Chakra.Container maxW="container.md">
 					<Education />
 				</Chakra.Container>
-			</Chakra.Box>
+			</BoxHeading>
 		</Chakra.Box>
 	);
 };

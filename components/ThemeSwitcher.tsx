@@ -12,8 +12,8 @@ const ThemeSwitcher: React.FC<ThemeSwitcherProps> = () => {
 			aria-label="Toggle theme"
 			position="fixed"
 			bottom={[0, 0, 'initial']}
-			top={['initial', 'initial', 0]}
-			right="0"
+			top={['initial', 'initial', 6]}
+			right={[0, 0, 6]}
 			mt={0}
 			onClick={toggleColorMode}
 			variant="ghost"
