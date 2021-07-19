@@ -30,7 +30,7 @@ export const myCourses: ICourse[] = [
 	{
 		name: 'React - The Complete Guide',
 		instructor: 'Maximilian Schwarzmüller',
-		imageUrl: 'https://img-a.udemycdn.com/course/480x270/1362070_b9a1_2.jpg',
+		imageUrl: '/courses/react-maximilian.jpeg',
 		height: 160,
 		width: 320,
 		length: '72 Hours',
@@ -39,7 +39,7 @@ export const myCourses: ICourse[] = [
 	{
 		name: 'Advanced Angular: MEAN Stack',
 		instructor: 'Fernando Herrera',
-		imageUrl: 'https://img-a.udemycdn.com/course/480x270/1420028_b32f_3.jpg',
+		imageUrl: '/courses/angular-fernando.jpeg',
 		height: 160,
 		width: 320,
 		length: '32 Hours',
@@ -48,7 +48,7 @@ export const myCourses: ICourse[] = [
 	{
 		name: 'Python for Data Science and Machine Learning Bootcamp',
 		instructor: 'Jose Portilla',
-		imageUrl: 'https://img-a.udemycdn.com/course/480x270/903744_8eb2.jpg',
+		imageUrl: '/courses/data-science.jpeg',
 		height: 160,
 		width: 320,
 		length: '25 Hours',
@@ -57,7 +57,7 @@ export const myCourses: ICourse[] = [
 	{
 		name: 'Build a Backend REST API with Python & Django - Advanced (TDD)',
 		instructor: 'Mark Winterbottom',
-		imageUrl: 'https://img-a.udemycdn.com/course/480x270/2045310_f8a2_6.jpg',
+		imageUrl: '/courses/django.jpeg',
 		height: 160,
 		width: 320,
 		length: '8 Hours',
@@ -66,7 +66,7 @@ export const myCourses: ICourse[] = [
 	{
 		name: 'Build a Backend REST API with Python & Django - Beginner',
 		instructor: 'Mark Winterbottom',
-		imageUrl: 'https://img-a.udemycdn.com/course/480x270/2045310_f8a2_6.jpg',
+		imageUrl: '/courses/django-beginner.jpeg',
 		height: 160,
 		width: 320,
 		length: '5 Hours',
@@ -75,7 +75,7 @@ export const myCourses: ICourse[] = [
 	{
 		name: 'The Complete Python 3 Course: Beginner to Advanced!',
 		instructor: 'Joseph Delgadillo',
-		imageUrl: 'https://img-b.udemycdn.com/course/480x270/882826_4687_3.jpg',
+		imageUrl: '/courses/python.jpeg',
 		height: 160,
 		width: 320,
 		length: '18 Hours',
@@ -84,7 +84,7 @@ export const myCourses: ICourse[] = [
 	{
 		name: 'Advanced CSS and Sass: Flexbox, Grid, Animations and More!',
 		instructor: 'Jonas Schmedtmann',
-		imageUrl: 'https://img-a.udemycdn.com/course/480x270/1026604_790b_2.jpg',
+		imageUrl: '/courses/scss.jpeg',
 		height: 160,
 		width: 320,
 		length: '28 Hours',
@@ -93,7 +93,7 @@ export const myCourses: ICourse[] = [
 	{
 		name: 'The Complete Sketch 5 Course - Design Apps & Websites 2020',
 		instructor: 'Rob Percival',
-		imageUrl: 'https://img-a.udemycdn.com/course/480x270/1855830_155f_4.jpg',
+		imageUrl: '/courses/figma.jpeg',
 		height: 160,
 		width: 320,
 		length: '16 Hours',
@@ -102,7 +102,7 @@ export const myCourses: ICourse[] = [
 	{
 		name: 'The Complete React Developer Course (w/ Hooks and Redux)',
 		instructor: 'Andrew Mead',
-		imageUrl: 'https://img-a.udemycdn.com/course/480x270/1286908_1773_6.jpg',
+		imageUrl: '/courses/react-redux.jpeg',
 		height: 160,
 		width: 320,
 		length: '39 Hours',
@@ -111,7 +111,7 @@ export const myCourses: ICourse[] = [
 	{
 		name: 'Angular: From Zero to Hero (Legacy)',
 		instructor: 'Fernando Herrera',
-		imageUrl: 'https://img-b.udemycdn.com/course/480x270/1075334_8b5f_4.jpg',
+		imageUrl: '/courses/angular-fernando.jpeg',
 		height: 160,
 		width: 320,
 		length: '36 Hours',
@@ -120,7 +120,7 @@ export const myCourses: ICourse[] = [
 	{
 		name: 'Laravel 2019, the complete guide with real world projects',
 		instructor: 'Kati Frantz',
-		imageUrl: 'https://img-a.udemycdn.com/course/480x270/1064104_d365_3.jpg',
+		imageUrl: '/courses/laravel.jpeg',
 		height: 160,
 		width: 320,
 		length: '24 Hours',
@@ -129,7 +129,7 @@ export const myCourses: ICourse[] = [
 	{
 		name: 'Web Accessibility: Learn Best Practices, Tools & Techniques',
 		instructor: 'Loop',
-		imageUrl: 'https://img-a.udemycdn.com/course/480x270/302536_4b87_3.jpg',
+		imageUrl: '/courses/accessibility.jpeg',
 		height: 160,
 		width: 320,
 		length: '9 Hours',
@@ -138,7 +138,7 @@ export const myCourses: ICourse[] = [
 	{
 		name: 'Ionic 2/3: Build Android and iOS apps from scratch (legacy)',
 		instructor: 'Fernando Herrera',
-		imageUrl: 'https://img-a.udemycdn.com/course/480x270/1145678_760a_6.jpg',
+		imageUrl: '/courses/ionic2.jpeg',
 		height: 160,
 		width: 320,
 		length: '20 Hours',
@@ -147,7 +147,7 @@ export const myCourses: ICourse[] = [
 	{
 		name: 'The Modern GraphQL Bootcamp (with Node.js and Apollo)',
 		instructor: 'Andrew Mead',
-		imageUrl: 'https://img-a.udemycdn.com/course/480x270/1720558_d57e.jpg',
+		imageUrl: '/courses/graphql.jpeg',
 		height: 160,
 		width: 320,
 		length: '24 Hours',
@@ -156,7 +156,7 @@ export const myCourses: ICourse[] = [
 	{
 		name: 'Testing Angular 4 (previously Angular 2) Apps with Jasmine',
 		instructor: 'Mosh Hamedani',
-		imageUrl: 'https://img-b.udemycdn.com/course/480x270/1211596_127c_3.jpg',
+		imageUrl: '/courses/testing-angular.jpeg',
 		height: 160,
 		width: 320,
 		length: '2 Hours',
@@ -165,7 +165,7 @@ export const myCourses: ICourse[] = [
 	{
 		name: 'Symfony 3 - Master the Framework',
 		instructor: 'Víctor Robles',
-		imageUrl: 'https://img-a.udemycdn.com/course/480x270/690484_0388_2.jpg',
+		imageUrl: '/courses/symfony.jpeg',
 		height: 160,
 		width: 320,
 		length: '12 Hours',
