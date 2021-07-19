@@ -28,8 +28,7 @@ const SparkDigitalExperience: React.FC<SparkDigitalExperienceProps> = () => {
 			</Experience.Text>
 			<Experience.Text>
 				One of the most challenging tasks I faced was to maintain a legacy codebase built with a publisher/subscriber
-				library, which no one in the team was familiar with. Eventually we progressively migrated some features from
-				that codebase to redux.
+				library and migrate it to redux.
 			</Experience.Text>
 			The tech stack I used during this job included the following:
 			<Chakra.UnorderedList>

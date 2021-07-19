@@ -24,21 +24,20 @@ const AgileEngineExperience: React.FC<IAgileEngineExperienceProps> = () => {
 				</Chakra.Link>{' '}
 				for a year, which is the #1 job search platform in the world. I started out as a senior frontend developer, and
 				I started to take ownership of the project and guide other devs. <br />
-				After a year of hard work, I've been promoted to a <Chakra.Text as="b">Tech Lead</Chakra.Text> role and{' '}
-				<Chakra.Text as="b">ended up leading 4 development teams, composed by 16 developers.</Chakra.Text>
+				After a year of hard work, I've been promoted to a <Chakra.Text as="b">Team Lead</Chakra.Text> position and
+				since then I've been <Chakra.Text as="b">leading up to 6 teams</Chakra.Text>
 			</Experience.Text>
 			<Experience.Text>
-				My work consisted in helping{' '}
+				My work consisted in making{' '}
 				<Experience.Link href="https://www.indeed.com" isExternal>
 					Indeed.com
 				</Experience.Link>{' '}
-				achieve accessibility compliance in over 30 products, coordinate work with stakeholders, train my team, and lead
-				them to success.
+				achieve accessibility compliance across multiple projects.
 			</Experience.Text>
 			<Experience.Text>
 				This task required a lot of communication skills, coordination, planning, and tracking the team's work. On the
-				technical side, I've worked with many monorepos, libraries, apps and plugins with both new and old codebases;
-				and I contributed to different teams following their respective workflows and guidelines.
+				technical side, I've worked with monorepos, libraries, apps and plugins with both new and old codebases and I
+				contributed to different teams following their respective workflows and guidelines.
 			</Experience.Text>
 			The tech stack I used during this job included the following:
 			<Chakra.UnorderedList>
