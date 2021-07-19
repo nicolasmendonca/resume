@@ -15,11 +15,11 @@ const ThemeSwitcher = dynamic(() => import(/* webpackMode: "lazy" */ 'components
 const Particles = dynamic(() => import(/* webpackMode: "lazy",  */ 'components/Particles'));
 
 function useBodyBg() {
-	return Chakra.useColorModeValue('gray.300', 'gray.600');
+	return Chakra.useColorModeValue('gray.100', 'gray.600');
 }
 
 function useHeadingBg() {
-	return Chakra.useColorModeValue('gray.200', 'gray.700');
+	return Chakra.useColorModeValue('gray.300', 'gray.700');
 }
 
 const BoxContainer = (props) => {
@@ -37,7 +37,7 @@ const BoxHeading = (props) => {
 interface IIndexPageProps {}
 
 const IndexPage: React.FC<IIndexPageProps> = () => {
-	const bodyBg = Chakra.useColorModeValue('gray.300', 'gray.600');
+	const bodyBg = Chakra.useColorModeValue('gray.100', 'gray.600');
 
 	return (
 		<Chakra.Box minHeight="100vh" backgroundColor={bodyBg} position="relative">
