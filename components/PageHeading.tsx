@@ -25,7 +25,7 @@ const PageHeading: React.FC = () => {
 				<Chakra.Flex mr={[0, 0, 6]} alignItems={['center', 'center', 'flex-end']} flexDirection="column">
 					<Chakra.Heading>Nicolás Mendonca</Chakra.Heading>
 					<Chakra.Text as="h2" fontSize="xl" letterSpacing="tight" py="2">
-						Full Stack Dev
+						Web Developer
 					</Chakra.Text>
 					<Chakra.Grid gridTemplateColumns="repeat(3, 1fr)" gridGap="2">
 						<Chakra.Tooltip label="Github">
